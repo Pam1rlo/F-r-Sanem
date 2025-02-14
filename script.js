@@ -11,8 +11,17 @@ const noMessages = [
     "Ich liebe dich wieso sagst du nein??"
 ];
 
+let currentScale = 1; // Initiale Skalierung
+
+function enlargeYesButton() {
+    currentScale += 0.3; // Vergrößern der Skalierung um 0.1
+    if (currentScale <= 10) { // Maximal auf das 2-fache der Originalgröße
+        yesBtn.style.transform = `scale(${currentScale})`; 
+    }
+}
+
 noBtn.addEventListener('click', () => {
-    yesBtn.classList.add('big');
+    enlargeYesButton();  // Ja-Button vergrößern
     const randomMessage = noMessages[Math.floor(Math.random() * noMessages.length)];
     noBtn.innerText = randomMessage;
 });

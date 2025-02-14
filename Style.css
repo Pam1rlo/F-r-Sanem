@@ -1,0 +1,105 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #f8b3d1, #f7a3c7);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 500px;
+    animation: fadeIn 2s ease-out;
+}
+
+h1 {
+    color: #ff6699;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Yes Button - Grün und weiße Schrift */
+#yesBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* No Button - Rot und weiße Schrift */
+#noBtn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#noBtn:hover {
+    background-color: #e60000;
+    transform: scale(1.1);
+}
+
+#yesBtn.big {
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+
+#image-container img {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
